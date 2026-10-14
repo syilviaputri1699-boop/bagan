@@ -1,0 +1,299 @@
+.tombol-kembali {
+    background: var(--sage-dark);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 30px;
+    margin: 25px auto 35px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(63, 75, 53, 0.15);
+    transition: 0.3s;
+}
+
+.tombol-kembali:hover {
+    background: var(--sage);
+    transform: translateY(-3px);
+}
+
+/* ===== CSS tambahan dari bagian style lain ===== */
+
+:root {
+            --cream: #F4F6E9;
+            --cream-dark: #E8EBD8;
+            --sage-light: #DDE5C7;
+            --sage: #A8B58A;
+            --sage-dark: #536447;
+            --text: #3F4B35;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            text-align: center;
+        }
+        .pembuka {
+            position: fixed;
+            inset: 0;
+            z-index: 10;
+            background: linear-gradient(
+                135deg,
+                var(--cream),
+                var(--sage-light),
+                #EEF0DF
+            );
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            transition: opacity 0.5s ease;
+        }
+
+        .pembuka h1 {
+            color: var(--sage-dark);
+            font-size: 60px;
+            margin: 0 0 12px;
+        }
+
+        .pembuka p {
+            color: var(--sage-dark);
+            font-size: 20px;
+            margin: 8px 0;
+        }
+
+        .hiasan {
+            font-size: 45px;
+            margin: 15px;
+        }
+        .tombol-masuk {
+            background: var(--sage);
+            color: #263522;
+            border: none;
+            border-radius: 30px;
+            padding: 15px 38px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 25px;
+            box-shadow: 0 6px 15px rgba(63, 75, 53, 0.18);
+            transition: 0.3s;
+        }
+
+        .tombol-masuk:hover {
+            background: #8FA174;
+            transform: translateY(-4px);
+        }
+        #isiKeluarga {
+            display: none;
+            min-height: 100vh;
+            padding: 35px 20px;
+            background: var(--cream);
+        }
+
+        .judul {
+            color: var(--sage-dark);
+            font-size: 42px;
+            margin: 5px 0;
+        }
+
+        .subjudul {
+            display: inline-block;
+            color: var(--sage-dark);
+            background: var(--sage-light);
+            padding: 8px 25px;
+            border-radius: 25px;
+            font-size: 18px;
+            margin: 8px 0 35px;
+        }
+        .keluarga {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 45px;
+            margin: 0 auto;
+            max-width: 1100px;
+        }
+
+        .baris {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 35px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .anggota {
+            background: transparent;
+            border: none;
+            padding: 0;
+            width: 190px;
+            transition: transform 0.3s ease;
+        }
+        .anggota img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 4px solid var(--white);
+            display: block;
+            margin: auto;
+            box-shadow:
+                0 7px 16px rgba(63, 75, 53, 0.18),
+                0 12px 24px rgba(63, 75, 53, 0.10);
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .anggota:hover {
+            transform: translateY(-5px);
+        }
+
+        .anggota:hover img {
+            box-shadow: 0 14px 25px rgba(63, 75, 53, 0.25);
+        }
+        .anggota h3 {
+            margin: 14px 0 5px;
+            color: var(--white);
+            background: var(--sage-dark);
+            padding: 8px 5px;
+            border-radius: 20px;
+            font-size: 21px;
+        }
+
+        .anggota p {
+            margin: 5px 0;
+            color: var(--text);
+            background: var(--cream-dark);
+            padding: 7px;
+            border-radius: 20px;
+            font-size: 16px;
+        }
+        .hiasan-bawah {
+            color: var(--sage);
+            font-size: 25px;
+            margin-top: 40px;
+        }
+        .tombol-kembali {
+            background: var(--sage-dark);
+            color: var(--white);
+            border: none;
+            border-radius: 25px;
+            padding: 12px 25px;
+            margin: 30px 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .tombol-kembali:hover {
+            background: var(--text);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+            .pembuka h1 {
+                font-size: 44px;
+            }
+
+            .pembuka p {
+                font-size: 17px;
+            }
+
+            #isiKeluarga {
+                padding: 25px 10px;
+            }
+
+            .judul {
+                font-size: 32px;
+            }
+
+            .baris {
+                gap: 25px 12px;
+            }
+
+            .anggota {
+                width: 145px;
+            }
+
+            .anggota img {
+                width: 135px;
+                height: 135px;
+            }
+
+            .anggota h3 {
+                font-size: 18px;
+            }
+
+            .anggota p {
+                font-size: 13px;
+            }
+        }
+
+/* ===== CSS tambahan dari bagian style lain ===== */
+
+.kesimpulan {
+    max-width: 750px;
+    margin: 35px auto 20px;
+    padding: 25px;
+    background: #E8EBD8;
+    border: 2px solid #DDE5C7;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(63, 75, 53, 0.10);
+}
+
+.kesimpulan h2 {
+    color: #536447;
+    font-size: 28px;
+    margin: 0 0 8px;
+}
+
+.kesimpulan h3 {
+    color: #536447;
+    font-size: 21px;
+    margin: 8px 0 15px;
+}
+
+.kesimpulan p {
+    color: #3F4B35;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.kesimpulan .penutup {
+    color: #536447;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.kesimpulan .arti {
+    color: #667557;
+    font-size: 14px;
+    margin-top: 5px;
+}
+@media (max-width: 600px) {
+    .kesimpulan {
+        padding: 18px;
+        margin: 25px 5px;
+    }
+
+    .kesimpulan p {
+        font-size: 14px;
+    }
+}
